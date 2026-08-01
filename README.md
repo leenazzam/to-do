@@ -2,7 +2,7 @@
 
 A small Flutter app built to practice **BLoC/Cubit** state management and **Firebase Authentication** (Google & Facebook sign-in).
 
-<img width="1440" height="3120" alt="Screenshot_1785615063" src="https://github.com/user-attachments/assets/df471ffd-20e6-4048-b7d3-f6c0279c3d78" />
+<img width="200"  alt="Screenshot_1785615063" src="https://github.com/user-attachments/assets/df471ffd-20e6-4048-b7d3-f6c0279c3d78" />
 
 ## Stack
 
