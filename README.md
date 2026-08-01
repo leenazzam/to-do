@@ -1,16 +1,31 @@
-# to_do_app
+# To-Do App
 
-A new Flutter project.
+A small Flutter app built to practice **BLoC/Cubit** state management and **Firebase Authentication** (Google & Facebook sign-in).
 
-## Getting Started
+<img width="1440" height="3120" alt="Screenshot_1785615063" src="https://github.com/user-attachments/assets/df471ffd-20e6-4048-b7d3-f6c0279c3d78" />
 
-This project is a starting point for a Flutter application.
+## Stack
 
-A few resources to get you started if this is your first Flutter project:
+- `flutter_bloc` + `equatable` — Cubit for state management
+- `firebase_auth` — authentication
+- `google_sign_in` / `flutter_facebook_auth` — social login
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Structure
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+lib/
+├── core/            # shared widgets & theme
+├── features/login/
+│   ├── data/repo/           # AuthRepo
+│   └── presentation/
+│       ├── manger/cubit/    # AuthCubit + AuthState
+│       └── ui/               # LoginScreen
+└── main.dart
+```
+
+## What I learned
+
+- Cubit with a sealed `AuthState` (Initial / Loading / Error / Success)
+- `BlocListener` for side effects (dialogs, navigation) without rebuilding UI
+- Building an `OAuthCredential` from a provider token and signing in with `signInWithCredential`
+- Routing on app start based on `FirebaseAuth.instance.currentUser`
